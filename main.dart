@@ -8,7 +8,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( // Root widget
+    return MaterialApp(
+      // Root widget
       home: Scaffold(
         appBar: AppBar(
           title: const Text('My Home Page'),
@@ -18,13 +19,28 @@ class MyApp extends StatelessWidget {
             builder: (context) {
               return Column(
                 children: [
-                  const Text('Hello, World!'),
-                  const SizedBox(height: 20),
+                  const Text(
+                    "Flutter.",
+                    style: TextStyle(fontSize: 32),
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      border: UnderlineInputBorder(),
+                      labelText: 'Email',
+                    ),
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      border: UnderlineInputBorder(),
+                      labelText: 'Password',
+                    ),
+                  ),
+                  const Text('forgot password?'),
                   ElevatedButton(
                     onPressed: () {
                       print('Click!');
                     },
-                    child: const Text('A button'),
+                    child: const Text('login'),
                   ),
                 ],
               );
