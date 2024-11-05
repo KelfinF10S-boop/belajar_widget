@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,29 +22,60 @@ class MyApp extends StatelessWidget {
             builder: (context) {
               return Column(
                 children: [
+
+Container(
+  padding: const EdgeInsets.all(8.0),
+),
+
+
                   const Text(
                     "Flutter.",
                     style: TextStyle(fontSize: 32),
                   ),
-                  TextFormField(
+                  Container(
+                    margin: EdgeInsets.all(10),
+                  ),
+
+                  TextField(
                     decoration: const InputDecoration(
-                      border: UnderlineInputBorder(),
+                      border: OutlineInputBorder(),
                       labelText: 'Email',
                     ),
                   ),
-                  TextFormField(
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                  ),
+                  TextField(
                     decoration: const InputDecoration(
-                      border: UnderlineInputBorder(),
+                      border: OutlineInputBorder(),
                       labelText: 'Password',
                     ),
                   ),
-                  const Text('forgot password?'),
-                  ElevatedButton(
-                    onPressed: () {
-                      print('Click!');
-                    },
-                    child: const Text('login'),
+                  Container(
+                    margin: EdgeInsets.all(10),
                   ),
+                  const Text(
+                    'forgot password?',
+                    style: TextStyle(color: Colors.blueAccent),
+                    ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 0, 109, 199),
+                    ),
+                    child: const Text('login'),
+                    onPressed: () {
+                      print('button has clicked!');
+                    },
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(380),
+                    child: const Text('new user? get account'),
+                  ),
+
                 ],
               );
             },
